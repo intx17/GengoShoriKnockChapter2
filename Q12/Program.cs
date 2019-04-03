@@ -23,7 +23,7 @@ namespace Q12
             {
                 var splittedLine = Regex.Split(line, @"\t");
                 col1Contents.Add(splittedLine.Count() >= 1 ? splittedLine[0] : string.Empty);
-                col1Contents.Add(splittedLine.Count() >= 2 ? splittedLine[1] : string.Empty);
+                col2Contents.Add(splittedLine.Count() >= 2 ? splittedLine[1] : string.Empty);
             }
 
             File.WriteAllText("../col1.txt", string.Join('\n', col1Contents));
