@@ -12,8 +12,6 @@ namespace Q17
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             var colNumForDescedingSort = 3;
 
             // C#
