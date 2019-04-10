@@ -12,19 +12,17 @@ namespace Q18
 
         static void Main(string[] args)
         {
-            const int colNumUsedForSortingByDesc = 1;
+            Console.WriteLine("Hello World!");
+
+            var colNumForDescedingSort = 3;
 
             // C#
-            var cSharpRes = File.ReadLines(filePath)
-                .Select(l => l.Split("\t").FirstOrDefault())
-                .Where(w => w != null)
-                .Distinct();
-
+            var cSharpRes = File.ReadAllLines(filePath)
+                .OrderByDescending(l => l.Split("\t")[colNumForDescedingSort - 1]);
             cSharpRes.DebugLog("cSharpResult");
 
-
             // Bash
-            $"cat {filePath} | cut -f{colNumUsedForSortingByDesc} | sort | uniq".WriteBashLine();
+            $"sort -k{colNumForDescedingSort}r -t '\t' {filePath}".WriteBashLine();
         }
     }
 }
