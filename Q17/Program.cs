@@ -4,7 +4,7 @@ using BashExtension;
 using System.IO;
 using System.Linq;
 
-namespace Q18
+namespace Q17
 {
     class Program
     {
@@ -12,17 +12,19 @@ namespace Q18
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            var colNumForDescedingSort = 3;
+            const int colNumUsedForSortingByDesc = 1;
 
             // C#
-            var cSharpRes = File.ReadAllLines(filePath)
-                .OrderByDescending(l => l.Split("\t")[colNumForDescedingSort - 1]);
+            var cSharpRes = File.ReadLines(filePath)
+                .Select(l => l.Split("\t").FirstOrDefault())
+                .Where(w => w != null)
+                .Distinct();
+
             cSharpRes.DebugLog("cSharpResult");
 
+
             // Bash
-            $"sort -k{colNumForDescedingSort}r -t '\t' {filePath}".WriteBashLine();
+            $"cat {filePath} | cut -f{colNumUsedForSortingByDesc} | sort | uniq".WriteBashLine();
         }
     }
 }
