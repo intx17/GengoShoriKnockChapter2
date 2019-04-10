@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q16", "Q16\Q16.csproj", "{1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogExtension", "..\LogExtension\LogExtension\LogExtension.csproj", "{62E11962-D9DB-42B0-87B1-EAE2C18A6027}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q17", "Q17\Q17.csproj", "{43ED456C-84C3-4D8C-87A0-9DC43224A79C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,5 +70,9 @@ Global
 		{62E11962-D9DB-42B0-87B1-EAE2C18A6027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E11962-D9DB-42B0-87B1-EAE2C18A6027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E11962-D9DB-42B0-87B1-EAE2C18A6027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43ED456C-84C3-4D8C-87A0-9DC43224A79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43ED456C-84C3-4D8C-87A0-9DC43224A79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43ED456C-84C3-4D8C-87A0-9DC43224A79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43ED456C-84C3-4D8C-87A0-9DC43224A79C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
