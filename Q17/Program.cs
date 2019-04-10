@@ -12,15 +12,15 @@ namespace Q17
 
         static void Main(string[] args)
         {
-            var colNumForDescedingSort = 3;
+            var colNumForDescendingSort = 3;
 
             // C#
             var cSharpRes = File.ReadAllLines(filePath)
-                .OrderByDescending(l => l.Split("\t")[colNumForDescedingSort - 1]);
+                .OrderByDescending(l => l.Split("\t")[colNumForDescendingSort - 1]);
             cSharpRes.DebugLog("cSharpResult");
 
             // Bash
-            $"sort -k{colNumForDescedingSort}r -t '\t' {filePath}".WriteBashLine();
+            $"sort -k{colNumForDescendingSort}r -t '\t' {filePath}".WriteBashLine();
         }
     }
 }
